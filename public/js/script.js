@@ -69,7 +69,7 @@ no_button.addEventListener('click', () => {
     // Change banner source
     let banner = document.getElementById('banner');
     if (clicks === 0) {
-        banner.src = "public/images/no.gif";
+        banner.src = "public/images/yapa.jpg";
         refreshBanner();
     }
     clicks++;
@@ -100,13 +100,68 @@ yes_button.addEventListener('click', () => {
     let banner = document.getElementById('banner');
     banner.src = "public/images/yes.gif";
     refreshBanner();
+
+    // hide question heading
+    let questionHeading = document.getElementById('question-heading');
+    questionHeading.style.display = "none";
+
     // hide buttons div
     let buttons = document.getElementsByClassName('buttons')[0];
     buttons.style.display = "none";
+
     // show message div
     let message = document.getElementsByClassName('message')[0];
     message.style.display = "block";
+
+    // Center the message content
+    message.style.textAlign = "center"; // Center content horizontally
+
+    // create and add first image
+    let newImage1 = document.createElement("img");
+    newImage1.src = "public/images/1.jpg"; // Путь к первой картинке
+    newImage1.alt = "Image 1";
+    newImage1.style.width = "200px"; // Размер
+    newImage1.style.marginTop = "20px"; // Отступ сверху
+    newImage1.style.display = "block"; // Блоковое отображение
+    newImage1.style.marginLeft = "auto"; // Центрирование по горизонтали
+    newImage1.style.marginRight = "auto"; // Центрирование по горизонтали
+    message.appendChild(newImage1);
+
+    // create and add second image
+    let newImage2 = document.createElement("img");
+    newImage2.src = "public/images/2.jpg"; // Путь ко второй картинке
+    newImage2.alt = "Image 2";
+    newImage2.style.width = "200px";
+    newImage2.style.marginTop = "20px"; // Отступ сверху
+    newImage2.style.display = "block"; // Блоковое отображение
+    newImage2.style.marginLeft = "auto"; // Центрирование по горизонтали
+    newImage2.style.marginRight = "auto"; // Центрирование по горизонтали
+    message.appendChild(newImage2);
+
+    // create and add third image
+    let newImage3 = document.createElement("img");
+    newImage3.src = "public/images/3.jpg"; // Путь к третьей картинке
+    newImage3.alt = "Image 3";
+    newImage3.style.width = "200px";
+    newImage3.style.marginTop = "20px"; // Отступ сверху
+    newImage3.style.display = "block"; // Блоковое отображение
+    newImage3.style.marginLeft = "auto"; // Центрирование по горизонтали
+    newImage3.style.marginRight = "auto"; // Центрирование по горизонтали
+    message.appendChild(newImage3);
+
+    // create and add fourth image
+    let newImage4 = document.createElement("img");
+    newImage4.src = "public/images/4.jpg"; // Путь к четвертой картинке
+    newImage4.alt = "Image 4";
+    newImage4.style.width = "200px";
+    newImage4.style.marginTop = "20px"; // Отступ сверху
+    newImage4.style.display = "block"; // Блоковое отображение
+    newImage4.style.marginLeft = "auto"; // Центрирование по горизонтали
+    newImage4.style.marginRight = "auto"; // Центрирование по горизонтали
+    message.appendChild(newImage4);
 });
+
+
 
 function refreshBanner() {
     // Reload banner gif to force load  
