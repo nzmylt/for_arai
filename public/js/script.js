@@ -139,15 +139,7 @@ yes_button.addEventListener('click', () => {
     message.appendChild(newImage2);
 
     // create and add third image
-    let newImage3 = document.createElement("img");
-    newImage3.src = "public/images/3.jpg"; // Путь к третьей картинке
-    newImage3.alt = "Image 3";
-    newImage3.style.width = "200px";
-    newImage3.style.marginTop = "20px"; // Отступ сверху
-    newImage3.style.display = "block"; // Блоковое отображение
-    newImage3.style.marginLeft = "auto"; // Центрирование по горизонтали
-    newImage3.style.marginRight = "auto"; // Центрирование по горизонтали
-    message.appendChild(newImage3);
+
 
     // create and add fourth image
     let newImage4 = document.createElement("img");

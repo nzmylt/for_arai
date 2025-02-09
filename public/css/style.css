@@ -50,8 +50,11 @@ body {
 
 /* Make responsive for mobile */
 @media (max-width: 768px) {
-    body {
-        padding: 0 20px;
+    img {
+        max-width: 90%; /* Ограничивает ширину картинки до 90% ширины экрана */
+        height: auto; /* Сохраняет пропорции */
+        display: block; /* Убирает пробелы вокруг картинки */
+        margin: 0 auto; /* Центрирует изображение */
     }
 }
 
