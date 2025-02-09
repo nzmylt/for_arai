@@ -198,3 +198,25 @@ function changeLanguage() {
         successMessage.textContent = "Yepppie, see you sooonnn :3";
     }
 }
+document.addEventListener("DOMContentLoaded", function() {
+    let audio = document.getElementById("background-music");
+    let musicButton = document.getElementById("toggle-music");
+
+    // Включаем музыку при первом клике на страницу (если браузер блокирует autoplay)
+    document.addEventListener("click", function() {
+        if (audio.paused) {
+            audio.play();
+        }
+    }, { once: true }); // Срабатывает только один раз
+
+    // Включение/выключение музыки кнопкой
+    musicButton.addEventListener("click", function() {
+        if (audio.paused) {
+            audio.play();
+            musicButton.textContent = "🔇";
+        } else {
+            audio.pause();
+            musicButton.textContent = "🔊";
+        }
+    });
+});
